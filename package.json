@@ -1,6 +1,39 @@
 {
   "name": "planning-poker",
   "version": "0.1.0",
+  "description": "Planning poker is a real-time voting application during team plannings to provide own estimate for a ticket.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcoypaco/planning-poker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mcoypaco/planning-poker/issues"
+  },
+  "homepage": "https://github.com/mcoypaco/planning-poker#readme",
+  "release": {
+    "branches": [
+      {
+        "name": "main"
+      },
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ]
+    ]
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -28,10 +61,12 @@
     "vuex": "^3.3.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.3.0",
-    "@vue/cli-plugin-eslint": "^4.3.0",
-    "@vue/cli-plugin-pwa": "^4.3.1",
-    "@vue/cli-service": "^4.3.0",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-plugin-pwa": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
@@ -41,11 +76,12 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.19.0",
-    "sass-loader": "^8.0.0",
+    "sass-loader": "^13.2.0",
+    "semantic-release": "^19.0.5",
     "vue-cli-plugin-pwa": "^1.0.0-alpha.1",
     "vue-cli-plugin-vuetify": "^2.0.5",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.3.0"
+    "vuetify-loader": "^1.9.2"
   },
   "eslintConfig": {
     "root": true,
