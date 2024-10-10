@@ -184,8 +184,10 @@ export default {
      * Sign in using a google account
      *
      */
-    googleSignIn () {
-      firebaseAuth.signInWithRedirect(google)
+    async googleSignIn () {
+      const user = await firebaseAuth.signInWithPopup(google)
+
+      if (user) location.reload()
     }
   },
   validations: {
