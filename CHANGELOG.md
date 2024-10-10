@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/mcoypaco/planning-poker/compare/v1.0.1...v1.0.2) (2024-10-10)
+
+
+### Bug Fixes
+
+* implement signInWithPopup as cross origin redirect sign-in is no longer supported in many browsers ([dd537e8](https://github.com/mcoypaco/planning-poker/commit/dd537e838589d262d49985bd3ffbd0855ec7d5d2))
+
 ## [1.0.1](https://github.com/mcoypaco/planning-poker/compare/v1.0.0...v1.0.1) (2023-01-06)
 
 
